@@ -1,0 +1,21 @@
+<div id="head"><p><%= link_to 'Home', root_path%>  <%=current_user.username%></p></div>
+
+<div><h1>Create a new post:</h1></div>
+<div><%=form_for @post do |f|%>
+    <%=fields_for @location do |fa|%>
+        <p><%=fa.label :country%><br>
+        <%=fa.text_field :country%></p>
+        <p><%=fa.label :area%><br>
+        <%=fa.text_field :area%></p>
+        <p><%=fa.label :picture%><br>
+            <%=fa.text_field :picture, placeholder: "Paste a URL here"%></p>
+        <%end%>
+    <p><%=f.label :title%><br>
+    <%=f.text_field :title%></p>
+    <p><%=f.label :date%><br>
+        <%=f.date_field :date, placeholder: "mm/dd/yyyy"%></p>
+    <p><%=f.label :body%><br>
+    <%=f.text_area :body, placeholder: "Tell us about your trip"%></p>
+    <%f.text_field :user, value: current_user[:username]%>
+    <%=f.submit "Submit Post"%></div>
+<%end%>

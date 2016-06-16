@@ -1,0 +1,15 @@
+<%if logged_in?%>
+    <div id="head"><p><%=link_to "New Post", new_post_path%>  <%=current_user.username%>  <%=link_to "logout", logout_path, method: :delete%></p></div>
+<%else%>
+        <div id="head"><p><%= link_to "Signup", new_user_path%>  <%= link_to "Login", login_path%></p></div>
+<%end%>
+<div><h1>Welcome to TravelDiary</h1>
+    <p>This is a website for you to share your experiences</p>
+    <p>You can read everyone else's posts below, or you can sign up for an account and create your own!</p>
+</div>
+<%@posts.order('created_at DESC').each do |post|%>
+<br><div><h2><%=post.title%></h2><br>
+    
+    <%=post.body%><br>
+<%=User.find_by(id: post.user_id).username%></div>
+<%end%>

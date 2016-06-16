@@ -1,0 +1,7 @@
+<div id="head"><%=link_to 'Home', root_path%></div>
+<div><h1><%=@post.title%></h1></div>
+<div><p><%=@post.date%></p>
+<p><%=@post.body%></p>
+
+    <p><%=User.find_by(@post.user_id).username%></p>
+</div>

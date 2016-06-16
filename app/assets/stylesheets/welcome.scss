@@ -1,0 +1,95 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    /*border: 1px dashed blue;*/
+}
+html {
+    /*background-image: url('6b1335984e4ecd78_RevCover.xxxlarge_2x.jpg');*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: aliceblue;
+}
+
+body {
+    padding: 2em 2em 4em;
+    max-width: 800px;
+    font-family: Verdana;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #000000;
+}
+
+div {
+    height: auto;
+    width: auto;
+    box-shadow: 3px 3px 3px 1px rgba(100,100,100,0.9);
+    background: rgba(247,247,247,1);
+    padding: 0.1px 10px 0.1px 10px;
+    margin: 10px 5px 0px -30px;
+    position: relative;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2E2E2E;
+    font-weight: 600;
+    line-height: 1.3em;
+    opacity: 1;
+}
+
+h2 {
+    margin-top: 1.3em;
+}
+
+a:hover {
+    color: black;
+    background-color: azure;
+}
+
+b, strong {
+    font-weight: 600;
+}
+.side{
+    height: 1400px;
+    width: 200px;
+    background: rgba(250,250,250,0.8);
+    display: inline-block;
+    position: absolute;
+    margin: 0px 0px 0px -30px;
+}
+#head{
+    height: auto;
+    width: auto;
+    background: rgba(250,250,250,1);
+    bottom: 10px;
+    position: relative;
+    vertical-align: middle;
+    padding-top: 5px;
+    margin-left: -30px;
+
+}
+.head_button{
+    text-decoration: none;
+    color: black;
+    height: 32px;
+    width: 60px;
+    top: 9px;
+    position: absolute;
+    
+}
+.home_p{
+    display:inline-block;
+}
+.thumbnail{
+    max-width: 30%;
+    height: auto;
+    display: inline;
+    border-radius: 20px;
+}
+.front_card{
+    text-decoration: none;
+    color: black;
+}
